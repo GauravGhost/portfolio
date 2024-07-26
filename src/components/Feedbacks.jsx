@@ -1,12 +1,8 @@
 import { motion } from "framer-motion";
 
 import { styles } from "../styles";
-import { SectionWrapper } from "../hoc";
 import { fadeIn, textVariant } from "../utils/motion";
-import { testimonials } from "../constants";
 
-import { BallCanvas } from "./canvas";
-import { technologies } from "../constants";
 import { github, gmail, linkedin, whatsapp } from "../assets";
 
 const FeedbackCard = ({
@@ -48,13 +44,12 @@ const FeedbackCard = ({
 // max-w-7xl
 const Feedbacks = () => {
   return (
-    <div className="mt-12   bg-black-100 rounded-[20px] flex justify-between items-center flex-wrap">
+    <div className="mt-12 bg-[#005b40] flex justify-between items-center flex-wrap">
       <div
         className={`${styles.padding} rounded-2xl `}
       >
         <motion.div variants={textVariant()}>
           <p className={styles.sectionSubText}>Feel Free to Reach Out</p>
-          {/* <h2 className={styles.sectionHeadText}>Testimonials.</h2> */}
           <p className="mt-4">Email
             <a className=" pl-4 cursor-pointer text-gray-400" href="mailto:gyanendrak478@gmail.com">
               gyanendrak478@gmail.com
@@ -62,7 +57,7 @@ const Feedbacks = () => {
           </p>
           <p className="mt-1">Phone
             <a className=" pl-4 cursor-pointer text-gray-400" href="https://wa.me/+916200551873">
-              +91 8967900358
+              +91 6200551873
             </a>
           </p>
         </motion.div>

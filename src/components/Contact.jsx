@@ -32,7 +32,6 @@ const Contact = () => {
 
   function validateFormData(data) {
     const errors = {};
-    console.log(data, '==--==---==')
     // Validate name
     if (!data.user_name || data.user_name.trim() === "") {
       errors.user_name = "Name is required";
@@ -108,7 +107,7 @@ const Contact = () => {
     >
       <motion.div
         variants={slideIn("left", "tween", 0.2, 1)}
-        className="flex-[0.75] bg-black-100 p-8 rounded-2xl"
+        className="flex-[1] bg-[#008059] p-8 rounded-2xl"
       >
         <p className={styles.sectionSubText}>Get in touch</p>
         <h3 className={styles.sectionHeadText}>Contact.</h3>
@@ -173,7 +172,7 @@ const Contact = () => {
 
       <motion.div
         variants={slideIn("right", "tween", 0.2, 1)}
-        className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px]"
+        className="xl:flex-[1.2] xl:h-auto md:h-[450px] h-[250px]"
       >
         <EarthCanvas />
       </motion.div>
