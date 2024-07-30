@@ -67,14 +67,12 @@ const Contact = () => {
 
     setLoading(true);
 
-    console.log(form)
-
     emailjs
       .send(
-        "service_z906gri",
-        "template_gcuy99h",
-        form.current,
-        "IFlQEEHBhHHUWCHFp"
+        "service_kv3sp4b",
+        "template_xp0sutu",
+        form,
+        "B6YaRBOKgG15IL6Qq"
       )
       .then(
         () => {
