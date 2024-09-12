@@ -5,7 +5,7 @@ import swal from "sweetalert";
 
 
 import { styles } from "../styles";
-import { EarthCanvas } from "./canvas";
+import { EarthCanvas } from "../components/canvas";
 import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
 
