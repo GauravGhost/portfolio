@@ -28,17 +28,21 @@ import sql from './tech/sql.png'
 import java from './tech/java.svg';
 import springboot from './tech/spring.svg';
 
-
-
-// Project Images
-import carrent from "./project/carrent.png";
-import jobit from "./project/jobit.png";
-
 // Social Logo
 import linkedin from './social/linkedin.png';
 import github from "./social/github.png";
 import gmail from './social/gmail.png'
 import whatsapp from './social/whatsapp.png';
+
+// Project Images
+import carrent from "./project/carrent.png";
+import jobit from "./project/jobit.png";
+import airplane from "./project/airplane.jpg";
+import portfolio from "./project/portfolio.jpg";
+import qshort from "./project/qshort.png";
+import zespcode from "./project/zespcode.jpg";
+import uber from "./project/uber.jpg"
+
 
 export {
   wiseneosco,
@@ -65,9 +69,14 @@ export {
   express,
   java,
   springboot,
-  
+
   carrent,
   jobit,
+  airplane,
+  portfolio,
+  qshort,
+  zespcode,
+  uber,
 
   github,
   gmail,

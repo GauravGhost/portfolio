@@ -31,8 +31,8 @@ const Works = () => {
       <div className="mt-20">
         <ProjectSlider>
           {projects.map((project, index) => (
-            <div key={`project-${index}`} className="flex justify-center">
-              <ProjectCard index={index} {...project} />
+            <div key={`${project.name}`} className="flex justify-center px-6">
+              <ProjectCard index={index} {...project} titleText="24" cardPadding="18" maxWords="130" />
             </div>
           ))}
         </ProjectSlider>

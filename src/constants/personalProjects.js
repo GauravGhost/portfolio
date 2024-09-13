@@ -1,112 +1,95 @@
-import { carrent, jobit } from "../assets";
+import { airplane, portfolio, qshort, uber, zespcode } from "../assets";
+import { techTags } from "./techTags";
 
 export const personalProjects = [
     {
-        name: "Library Management System",
+        name: "Zespcode (Leetcode Clone)",
+        overview: "",
         description:
-            "We developed a Smart Library Management System using the MERN stack and React Native for mobile apps.",
+            "Leetcode like backend based on Microservice to ensure modularity and scalability. It supports three languages for problem statement.",
         tags: [
-            {
-                name: "react.js",
-                color: "blue-text-gradient",
-            },
-            {
-                name: "react native",
-                color: "pink-text-gradient",
-            },
-            {
-                name: "node.js",
-                color: "green-text-gradient",
-            },
-            {
-                name: "sql",
-                color: "pink-text-gradient",
-            },
+            techTags.docker,
+            techTags.fastify,
+            techTags.node,
+            techTags.typescript,
+            techTags.mongodb,
+            techTags.redisQueue
         ],
-        image: carrent,
-        source_code_link: "https://github.com/gauravghost",
-        github: "",
+        image: zespcode,
+        github: "https://github.com/GauravGhost/zespcode",
         live: "",
     },
     {
-        name: "Access Control System",
+        name: "Uber",
+        overview: "",
+        description:
+            "Ride booking application, designed to handle user requests for ride services efficiently. The system leverages MongoDB for data storage and RedisGeo for managing location-based queries. This setup allows for scalable and responsive ride booking operations, ensuring that users can quickly find and book rides based on their geographic location.",
+        tags: [
+            techTags.node,
+            techTags.mongodb,
+            techTags.redis,
+        ],
+        image: uber,
+        github: "https://github.com/GauravGhost/uber",
+        live: "",
+    },
+    {
+        name: "Qkart",
+        overview: "",
+        description:
+            "QKart is an E-commerce application offering a variety of products for customers to choose from. Implemented the core logic for authentication, shopping cart, and checkout with responsive design elements for the uniform experience across different devices.",
+        tags: [
+            techTags.node,
+            techTags.react,
+            techTags.mongodb,
+            techTags.javascript
+        ],
+        image: "https://crio-directus-assets.s3.ap-south-1.amazonaws.com/e6fb82a2-423d-4f62-9962-f19f2f81fa8c.png",
+        github: "https://github.com/GauravGhost/QKart-Backend",
+        live: "https://qkartmity.netlify.app/",
+    },
+    {
+        name: "Portfolio",
+        overview: "",
+        description:
+            "This portfolio features a sophisticated full stack web application developed using a modern tech stack. The frontend leverages React for a dynamic, interactive user interface, enhanced with Tailwind CSS for responsive design and Framer Motion for smooth animations.",
+        tags: [
+            techTags.react,
+            techTags.javascript,
+            techTags.tailwind
+        ],
+        image: portfolio,
+        github: "https://github.com/GauravGhost/portfolio",
+        live: "https://portfolio.zesp.in/",
+    },
+    {
+        name: "Airline Management System",
+        overview: "",
+        description:
+            "It is based on a microservice architecture, comprising four distinct microservices that collectively provide a comprehensive flight management system.",
+        tags: [
+            techTags.node,
+            techTags.rabbitMQ,
+            techTags.microservices,
+            techTags.mysql
+        ],
+        image: airplane,
+        github: "https://github.com/GauravGhost/Flight-Service",
+        live: "",
+    },
+    {
+        name: "Qshort (url Shortner)",
+        overview: "",
         description:
             "Our team developed an advanced Access Control System using Electron and React technologies.",
         tags: [
-            {
-                name: "react.js",
-                color: "blue-text-gradient",
-            },
-            {
-                name: "node.js",
-                color: "green-text-gradient",
-            },
-            {
-                name: "sql",
-                color: "pink-text-gradient",
-            },
-            {
-                name: "electron.js",
-                color: "blue-text-gradient",
-            },
+            techTags.node,
+            techTags.rabbitMQ,
+            techTags.microservices,
+            techTags.mysql
         ],
-        image: jobit,
-        source_code_link: "https://github.com/gauravghost",
-        github: "",
-        live: "",
-    },
-    {
-        name: "Library Management System",
-        description:
-            "We developed a Smart Library Management System using the MERN stack and React Native for mobile apps.",
-        tags: [
-            {
-                name: "react.js",
-                color: "blue-text-gradient",
-            },
-            {
-                name: "react native",
-                color: "pink-text-gradient",
-            },
-            {
-                name: "node.js",
-                color: "green-text-gradient",
-            },
-            {
-                name: "sql",
-                color: "pink-text-gradient",
-            },
-        ],
-        image: carrent,
-        source_code_link: "https://github.com/gauravghost",
-        github: "",
-        live: "",
-    },
-    {
-        name: "Access Control System",
-        description:
-            "Our team developed an advanced Access Control System using Electron and React technologies.",
-        tags: [
-            {
-                name: "react.js",
-                color: "blue-text-gradient",
-            },
-            {
-                name: "node.js",
-                color: "green-text-gradient",
-            },
-            {
-                name: "sql",
-                color: "pink-text-gradient",
-            },
-            {
-                name: "electron.js",
-                color: "blue-text-gradient",
-            },
-        ],
-        image: jobit,
-        source_code_link: "https://github.com/gauravghost",
-        github: "",
-        live: "",
+        image: qshort,
+        github: "https://github.com/GauravGhost/QShort",
+        live: "https://qshortx.netlify.app/",
     },
 ];

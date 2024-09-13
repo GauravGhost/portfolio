@@ -1,7 +1,6 @@
 import { useState, useRef } from "react";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
-import swal from "sweetalert";
 
 
 import { styles } from "../styles";
@@ -77,24 +76,11 @@ const Contact = () => {
       .then(
         () => {
           setLoading(false);
-          // alert("Thank you. I will get back to you as soon as possible.");
-          // swal({
-          //   icon: "success",
-          //   title: "Thank you.",
-          //   text: " I will get back to you as soon as possible.",
-          // })
-
           setForm(initial);
           setSuccess(true);
         },
         (error) => {
           setLoading(false);
-
-          console.log(error);
-          // alert("Something went wrong.");
-          // swal("Opps! Something went wrong.", {
-          //   icon: "error",
-          // })
         }
       );
   };
