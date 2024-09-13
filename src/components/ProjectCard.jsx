@@ -15,7 +15,8 @@ const ProjectCard = ({
   titleText = '24',
   cardPadding = '15',
   tiltMax = "10",
-  maxWords = "18"
+  maxWords = "18",
+  imageHeight="250"
 }) => {
   const [isExpanded, setIsExpanded] = useState(false);
   const truncateDescription = (text, wordLimit) => {
@@ -37,7 +38,10 @@ const ProjectCard = ({
       >
 
         {/* Project Image */}
-        <div className="relative w-full h-[200px] group-hover:brightness-50  transition-all duration-300">
+        <div 
+        className="relative w-full group-hover:brightness-50 group-hover:scale-95  transition-all duration-300"
+        style={{height: `${imageHeight}px`}}
+        >
           <img
             src={image}
             alt={name}

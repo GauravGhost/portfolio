@@ -28,7 +28,7 @@ const PersonalProject = () => {
                 <ProjectSlider slidesToScroll={1} slidesToShow={3} infinite={true} swipeToSlide={true}>
                     {personalProjects.map((project, index) => (
                         <div key={`${project.name}`} className="flex justify-center px-3">
-                            <ProjectCard index={index} {...project} titleText="18" cardPadding="10" tiltMax="0" />
+                            <ProjectCard index={index} {...project} titleText="18" cardPadding="10" tiltMax="0" imageHeight="200" />
                         </div>
                     ))}
                 </ProjectSlider>

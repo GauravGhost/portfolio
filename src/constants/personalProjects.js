@@ -1,4 +1,4 @@
-import { airplane, portfolio, qshort, uber, zespcode } from "../assets";
+import { airplane, highriseSdk, portfolio, qshort, uber, zespcode } from "../assets";
 import { techTags } from "./techTags";
 
 export const personalProjects = [
@@ -91,5 +91,20 @@ export const personalProjects = [
         image: qshort,
         github: "https://github.com/GauravGhost/QShort",
         live: "https://qshortx.netlify.app/",
+    },
+    {
+        name: "Highrise SDK",
+        overview: "",
+        description:
+            "A lightweight library for seamless interaction with Highrise servers to connect your bot to the highrise virtual world game with just simple code.",
+        tags: [
+            techTags.node,
+            techTags.rabbitMQ,
+            techTags.microservices,
+            techTags.mysql
+        ],
+        image: highriseSdk,
+        github: "https://github.com/GauravGhost/hr-sdk",
+        live: "https://www.npmjs.com/package/hr-sdk",
     },
 ];

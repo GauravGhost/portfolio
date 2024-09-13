@@ -41,7 +41,8 @@ import airplane from "./project/airplane.jpg";
 import portfolio from "./project/portfolio.jpg";
 import qshort from "./project/qshort.png";
 import zespcode from "./project/zespcode.jpg";
-import uber from "./project/uber.jpg"
+import uber from "./project/uber.jpg";
+import highriseSdk from "./project/highriseSdk.jpg"
 
 
 export {
@@ -77,6 +78,7 @@ export {
   qshort,
   zespcode,
   uber,
+  highriseSdk,
 
   github,
   gmail,
