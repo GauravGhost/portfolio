@@ -5,6 +5,7 @@ import { fadeIn } from "../utils/motion";
 import { useState } from "react";
 
 const ProjectCard = ({
+  id,
   index,
   name,
   description,

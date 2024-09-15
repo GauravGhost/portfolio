@@ -11,6 +11,7 @@ const ProjectSlider = ({ children, dot = false, infinite = false, slidesToScroll
     slidesToShow: slidesToShow,
     slidesToScroll: slidesToScroll,
     swipeToSlide: swipeToSlide,
+    
     pauseOnHover: true,
     autoplay: true,
     autoplaySpeed: 3000,
@@ -34,7 +35,7 @@ const ProjectSlider = ({ children, dot = false, infinite = false, slidesToScroll
   };
   return (
     <div className="w-full">
-      <Slider {...settings} arrows={false}>
+      <Slider {...settings} >
         {React.Children.map(children, (child) => (
           <div>{child}</div>
         ))}

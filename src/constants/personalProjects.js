@@ -3,6 +3,7 @@ import { techTags } from "./techTags";
 
 export const personalProjects = [
     {
+        id: "zespcode",
         name: "Zespcode (Leetcode Clone)",
         overview: "",
         description:
@@ -20,6 +21,7 @@ export const personalProjects = [
         live: "",
     },
     {
+        id: "uber",
         name: "Uber",
         overview: "",
         description:
@@ -34,6 +36,7 @@ export const personalProjects = [
         live: "",
     },
     {
+        id: "qkart",
         name: "Qkart",
         overview: "",
         description:
@@ -49,6 +52,7 @@ export const personalProjects = [
         live: "https://qkartmity.netlify.app/",
     },
     {
+        id: "portfolio",
         name: "Portfolio",
         overview: "",
         description:
@@ -63,6 +67,7 @@ export const personalProjects = [
         live: "https://portfolio.zesp.in/",
     },
     {
+        id: "airline-management-system",
         name: "Airline Management System",
         overview: "",
         description:
@@ -78,6 +83,7 @@ export const personalProjects = [
         live: "",
     },
     {
+        id: "qshort",
         name: "Qshort (url Shortner)",
         overview: "",
         description:
@@ -93,6 +99,7 @@ export const personalProjects = [
         live: "https://qshortx.netlify.app/",
     },
     {
+        id: "highrise-sdk",
         name: "Highrise SDK",
         overview: "",
         description:

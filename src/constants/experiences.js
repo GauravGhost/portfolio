@@ -1,6 +1,7 @@
 import { wiseneosco } from "../assets";
 export const experiences = [
     {
+        id: "",
         title: "Software Development Engineer",
         company_name: "Wise Neosco India Pvt. Ltd.",
         icon: wiseneosco,
