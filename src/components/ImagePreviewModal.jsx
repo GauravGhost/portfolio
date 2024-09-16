@@ -30,8 +30,8 @@ const ImagePreviewModal = ({ isOpen, setIsOpen, image }) => {
                             leaveFrom="opacity-100 scale-100"
                             leaveTo="opacity-0 scale-50"
                         >
-                            <DialogPanel className="w-full max-w-md transform overflow-hidden rounded-2xl bg-white text-left align-middle shadow-xl transition-all">
-                                <img src={image} alt="Preview" className="w-full h-auto" />
+                            <DialogPanel className="w-full max-w-2xl lg:hover:scale-150 lg:hover:cursor-zoom-in transform overflow-hidden rounded-2xl bg-white text-left align-middle shadow-xl transition-all">
+                                <img src={image} alt="Preview" className="w-full h-full" />
                                 <button
                                     type="button"
                                     className="absolute top-1 right-1 inline-flex justify-center border border-transparent"

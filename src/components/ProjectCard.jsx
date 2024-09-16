@@ -1,9 +1,10 @@
 import { Tilt } from "react-tilt";
 import { motion } from "framer-motion";
-
+import { next } from "../assets"
 import { fadeIn } from "../utils/motion";
 import { useState } from "react";
 import ImageWithHoverArrow from "./ImageWithHoverArrow";
+import { useNavigate } from "react-router-dom";
 
 const ProjectCard = ({
   id,
@@ -21,6 +22,7 @@ const ProjectCard = ({
   imageHeight = "250",
   minHeight = "445"
 }) => {
+  const navigate = useNavigate();
   const [isExpanded, setIsExpanded] = useState(false);
   const truncateDescription = (text, wordLimit) => {
     const words = text.split(' ');
@@ -42,18 +44,33 @@ const ProjectCard = ({
         {/* Project Image */}
         <ImageWithHoverArrow image={image} name={name} imageHeight={imageHeight} linkTo={id} key={id} />
 
-          {/* Project Name */}
-        <div className="mt-5">
-          <h3 className={`text-white font-bold`} style={{ fontSize: `${titleText}px` }}>{name}</h3>
-        </div>
+        <div className="flex flex-row justify-between">
+          <div className="">
+            {/* Project Name */}
+            <div className="mt-5">
+              <h3 className={`text-white font-bold`} style={{ fontSize: `${titleText}px` }}>{name}</h3>
+            </div>
 
-        {/* Source code and link  */}
-        <div>
-          <p className="text-[13px]">
-            {github && <a target="_blank" className="text-green-300 hover:text-green-50" href={github}>Github</a>}
-            {github && live && <span className="text-green-50"> | </span>}
-            {live && <a target="_blank" className="text-green-300 hover:text-green-50" href={live}>Live</a>}
-          </p>
+            {/* Source code and link  */}
+            <div>
+              <p className="text-[13px]">
+                {github && <a target="_blank" className="text-green-300 hover:text-green-50" href={github}>Github</a>}
+                {github && live && <span className="text-green-50"> | </span>}
+                {live && <a target="_blank" className="text-green-300 hover:text-green-50" href={live}>Live</a>}
+              </p>
+            </div>
+          </div>
+          {/* Project detail button */}
+          <div className="p-2 sm:hidden">
+            <button
+              onClick={() => navigate(`/project/${id}`)}
+              className=" bg-green-300 hover:bg-gray-500 rounded-full mr-1 w-9 h-9 mt-2 flex items-center justify-center"
+              aria-label="Go to previous page"
+            >
+              <img src={next} alt="Next" className="w-7 h-7" />
+            </button>
+            <p className="text-sm">More</p>
+          </div>
         </div>
 
         {/* Description */}

@@ -24,6 +24,15 @@ const ProjectPage = () => {
         findProject();
     }, [projectId]);
 
+    const scrollToElement = (id) => {
+        const element = document.getElementById(id);
+        if (element) {
+            window.scrollTo({
+                top: element.offsetTop - 80,
+                behavior: 'smooth',
+            });
+        }
+    };
     if (!project) {
         return <div className="text-center text-lg text-gray-600 h-screen items-center flex justify-center">Project not found</div>; // Fallback UI
     }
@@ -38,14 +47,14 @@ const ProjectPage = () => {
                         <section className="mt-6 hidden sm:block">
                             <p className='mb-3 text-xl font-semibold'>Content</p>
                             <div className="mb-2">
-                                <p className="text-sm font-semibold text-green-700 hover:text-green-500"><a href="#technology-used">Technology Used</a></p>
+                                <p className="text-sm font-semibold text-green-700 hover:text-green-500"> <button onClick={() => scrollToElement('technology-used')}>Technology Used</button></p>
                             </div>
                             <div className="mb-2">
-                                <p className="text-sm font-semibold text-green-700 hover:text-green-500"><a href="#project-details">Project Details</a></p>
+                                <p className="text-sm font-semibold text-green-700 hover:text-green-500"><button onClick={() => scrollToElement('project-details')}>Project Details</button></p>
                             </div>
                             {Object.entries(project.features).map(([category]) => (
                                 <div key={category} className="mb-2">
-                                    <p className="text-sm font-semibold text-green-700 hover:text-green-500"><a href={`#${category}`}>{category}</a></p>
+                                    <p className="text-sm font-semibold text-green-700 hover:text-green-500"><button onClick={() => scrollToElement(category)}>{category}</button></p>
                                 </div>
                             ))}
                         </section>
@@ -80,12 +89,12 @@ const ProjectPage = () => {
                 {project.features && Object.keys(project.features).length > 0 && (
                     <section className="mt-6">
                         {Object.entries(project.features).map(([category, items]) => (
-                            <div key={category} className="mb-4">
+                            <div key={category} className="mb-4" id={category}>
                                 <h3 className="text-xl font-semibold">{category}</h3>
                                 <ul className="list-disc pl-4 mt-2">
                                     {items?.length > 0 ? (
                                         items.map((item, index) => (
-                                            <li key={index} className="text-slate-400"><a id={category}></a>{item}</li>
+                                            <li key={index} className="text-slate-400" > {item}</li>
                                         ))
                                     ) : null}
                                 </ul>
