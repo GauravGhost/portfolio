@@ -5,13 +5,8 @@ import { fadeIn, textVariant } from "../utils/motion";
 import ProjectCard from "../components/ProjectCard";
 import ProjectSlider from "../components/Slider";
 import { personalProjects } from "../constants/personalProjects";
-import { useNavigate } from "react-router-dom";
 
 const PersonalProject = () => {
-    const navigate = useNavigate();
-    const navigateToProject = (projectId) => {
-        navigate(`/project/${projectId}`);
-    }
     return (
         <>
             <motion.div variants={textVariant()}>
@@ -32,7 +27,7 @@ const PersonalProject = () => {
             <div className="mt-20">
                 <ProjectSlider slidesToScroll={1} slidesToShow={3} infinite={true} swipeToSlide={true}>
                     {personalProjects.map((project, index) => (
-                        <div key={`${project.name}`} className="flex justify-center px-3" onClick={() => navigateToProject(project.id)}>
+                        <div key={`${project.name}`} className="flex justify-center px-3">
                             <ProjectCard index={index} {...project} titleText="18" cardPadding="10" tiltMax="0" imageHeight="200" />
                         </div>
                     ))}

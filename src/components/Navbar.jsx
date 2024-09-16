@@ -1,63 +1,73 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
-
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { styles } from "../styles";
-
 import { logo, menu, close } from "../assets";
 import { navLinks } from "../constants/navLinks";
 
 const Navbar = () => {
   const [active, setActive] = useState("");
   const [toggle, setToggle] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
-    const handleScroll = () => {
-      const scrollTop = window.scrollY;
-      if (scrollTop > 100) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-        setActive("");
-      }
-    };
+    if (location.pathname !== "/") {
+      window.scrollTo(0, 0);
+    }
+  }, [location.pathname]);
 
-    window.addEventListener("scroll", handleScroll);
-
-    const navbarHighlighter = () => {
-      const sections = document.querySelectorAll("section[id]");
-
-      sections.forEach((current) => {
-        const sectionId = current.getAttribute("id");
-        const sectionHeight = current.offsetHeight;
-        const sectionTop =
-          current.getBoundingClientRect().top - sectionHeight * 0.2;
-
-        if (sectionTop < 0 && sectionTop + sectionHeight > 0) {
-          setActive(sectionId);
+  useEffect(() => {
+    if (location.pathname === "/") {
+      const handleScroll = () => {
+        const scrollTop = window.scrollY;
+        if (scrollTop > 100) {
+        } else {
+          setActive("");
         }
-      });
-    };
+      };
 
-    window.addEventListener("scroll", navbarHighlighter);
+      const navbarHighlighter = () => {
+        const sections = document.querySelectorAll("section[id]");
 
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-      window.removeEventListener("scroll", navbarHighlighter);
-    };
-  }, []);
+        sections.forEach((current) => {
+          const sectionId = current.getAttribute("id");
+          const sectionHeight = current.offsetHeight;
+          const sectionTop =
+            current.getBoundingClientRect().top - sectionHeight * 0.2;
+
+          if (sectionTop < 0 && sectionTop + sectionHeight > 0) {
+            setActive(sectionId);
+          }
+        });
+      };
+
+      window.addEventListener("scroll", handleScroll);
+      window.addEventListener("scroll", navbarHighlighter);
+
+      return () => {
+        window.removeEventListener("scroll", handleScroll);
+        window.removeEventListener("scroll", navbarHighlighter);
+      };
+    } else {
+      setActive("");
+    }
+  }, [location.pathname]);
+
+  const handleNavigation = (path) => {
+    navigate(path);
+    window.scrollTo(0, 0);
+  };
 
   return (
     <nav
-      className={`${styles.paddingX
-        } w-full flex items-center py-5 fixed top-0 z-20 ${scrolled ? "bg-primary" : "bg-transparent"
-        }`}
+      className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-50 bg-primary`}
     >
       <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
         <Link
           to="/"
           className="flex items-center gap-2"
           onClick={() => {
+            setActive("");
             window.scrollTo(0, 0);
           }}
         >
@@ -71,10 +81,16 @@ const Navbar = () => {
           {navLinks.map((nav) => (
             <li
               key={nav.id}
-              className={`${active === nav.id ? "text-white" : "text-secondary"
-                } hover:text-white text-[18px] font-medium cursor-pointer`}
+              className={`${
+                active === nav.id ? "text-white" : "text-secondary"
+              } hover:text-white text-[18px] font-medium cursor-pointer`}
+              onClick={() => location.pathname !== "/" && handleNavigation(`/#${nav.id}`)}
             >
-              <a href={`#${nav.id}`}>{nav.title}</a>
+              {location.pathname === "/" ? (
+                <a href={`#${nav.id}`}>{nav.title}</a>
+              ) : (
+                <span>{nav.title}</span>
+              )}
             </li>
           ))}
         </ul>
@@ -88,21 +104,31 @@ const Navbar = () => {
           />
 
           <div
-          style={{ transition: "0.5s"}}
-            className={`${!toggle ? "hidden" : "flex"
-              } p-6 bg-black border-gray-500 border-2 absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl `}
+            style={{ transition: "0.5s" }}
+            className={`${
+              !toggle ? "hidden" : "flex"
+            } p-6 bg-black border-gray-500 border-2 absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}
           >
             <ul className="list-none flex justify-end items-start flex-1 flex-col gap-4">
               {navLinks.map((nav) => (
                 <li
                   key={nav.id}
-                  className={`font-poppins font-medium cursor-pointer text-[16px] ${active === nav.id ? "text-white" : "text-secondary"
-                    }`}
+                  className={`font-poppins font-medium cursor-pointer text-[16px] ${
+                    active === nav.id ? "text-white" : "text-secondary"
+                  }`}
                   onClick={() => {
                     setToggle(!toggle);
+                    setActive(nav.id);
+                    if (location.pathname !== "/") {
+                      handleNavigation(`/#${nav.id}`);
+                    }
                   }}
                 >
-                  <a href={`#${nav.id}`}>{nav.title}</a>
+                  {location.pathname === "/" ? (
+                    <a href={`#${nav.id}`}>{nav.title}</a>
+                  ) : (
+                    <span>{nav.title}</span>
+                  )}
                 </li>
               ))}
             </ul>

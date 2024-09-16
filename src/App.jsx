@@ -6,6 +6,7 @@ import {
 
 import Homepage from "./pages/Homepage";
 import ProjectPage from "./pages/ProjectPage";
+import { Feedbacks } from "./sections";
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
           <Route path="/" element={<Homepage />} />
           <Route path="/project/:projectId" element={<ProjectPage />} />
         </Routes>
+        <Feedbacks />
       </div>
     </BrowserRouter>
   );

@@ -1,5 +1,5 @@
 import React from 'react'
-import { About, Contact, Experience, Feedbacks, Hero, Tech, Works } from '../sections'
+import { About, Contact, Experience, Hero, Tech, Works } from '../sections'
 import PersonalProject from '../sections/PersonalProject'
 import { StarsCanvas } from '../components'
 
@@ -18,7 +18,7 @@ const Homepage = () => {
                 <Contact />
                 <StarsCanvas />
             </div>
-            <Feedbacks />
+           
         </>
     )
 }

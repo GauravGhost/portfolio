@@ -2,6 +2,8 @@
 import logo from "./ui/logo.png";
 import menu from "./ui/menu.svg";
 import close from "./ui/close.svg";
+import next from "./ui/next.png";
+import cross from './ui/cross.png';
 
 // company Logo
 import wiseneosco from "./company/wise.png";
@@ -27,6 +29,16 @@ import aws from './tech/aws.png'
 import sql from './tech/sql.png'
 import java from './tech/java.svg';
 import springboot from './tech/spring.svg';
+import nestjs from './tech/nestjs.svg';
+import php from './tech/php.svg';
+import redis from './tech/redis.svg';
+import rabbitMq from './tech/rabbitmq.svg';
+import mySql from './tech/my-sql.png';
+import sqlServer from './tech/sql-server.svg';
+import sequelize from './tech/sequelize.svg';
+import prisma from './tech/prisma.svg';
+import fastify from './tech/Fastify.svg';
+import microservice from './tech/microservice.png';
 
 // Social Logo
 import linkedin from './social/linkedin.png';
@@ -44,12 +56,19 @@ import zespcode from "./project/zespcode.jpg";
 import uber from "./project/uber.jpg";
 import highriseSdk from "./project/highriseSdk.jpg"
 
+// Zespcode Image
+import zespcode1 from "./project/zespcode/zespcode-01.png";
+
+// Airplane Image
+import airplane1 from "./project/airplane/airplane-01.png";
 
 export {
   wiseneosco,
   logo,
   menu,
   close,
+  next,
+  cross,
 
   backend,
   creator,
@@ -70,7 +89,18 @@ export {
   express,
   java,
   springboot,
+  nestjs,
+  php,
+  redis,
+  rabbitMq,
+  mySql,
+  sqlServer,
+  sequelize,
+  prisma,
+  fastify,
+  microservice,
 
+  // Project
   carrent,
   jobit,
   airplane,
@@ -79,6 +109,12 @@ export {
   zespcode,
   uber,
   highriseSdk,
+
+  // Zespcode
+  zespcode1,
+
+  // Airplane
+  airplane1,
 
   github,
   gmail,

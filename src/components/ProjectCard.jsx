@@ -3,12 +3,13 @@ import { motion } from "framer-motion";
 
 import { fadeIn } from "../utils/motion";
 import { useState } from "react";
+import ImageWithHoverArrow from "./ImageWithHoverArrow";
 
 const ProjectCard = ({
   id,
   index,
   name,
-  description,
+  overview,
   tags,
   image,
   github,
@@ -17,7 +18,8 @@ const ProjectCard = ({
   cardPadding = '15',
   tiltMax = "10",
   maxWords = "18",
-  imageHeight="250"
+  imageHeight = "250",
+  minHeight = "445"
 }) => {
   const [isExpanded, setIsExpanded] = useState(false);
   const truncateDescription = (text, wordLimit) => {
@@ -34,23 +36,13 @@ const ProjectCard = ({
         options={{ max: tiltMax, scale: 1, speed: 1000 }}
         className={`bg-[#008059] hover:bg-[#006e4d] transition-all duration-300 rounded-2xl w-full flex flex-col`}
         style={{
-          padding: `${cardPadding}px`, minHeight: "445px"
+          padding: `${cardPadding}px`, minHeight: `${minHeight}px`
         }}
       >
-
         {/* Project Image */}
-        <div 
-        className="relative w-full group-hover:brightness-50 group-hover:scale-95  transition-all duration-300"
-        style={{height: `${imageHeight}px`}}
-        >
-          <img
-            src={image}
-            alt={name}
-            className="w-full h-full object-cover rounded-2xl"
-          />
+        <ImageWithHoverArrow image={image} name={name} imageHeight={imageHeight} linkTo={id} key={id} />
 
           {/* Project Name */}
-        </div>
         <div className="mt-5">
           <h3 className={`text-white font-bold`} style={{ fontSize: `${titleText}px` }}>{name}</h3>
         </div>
@@ -67,9 +59,9 @@ const ProjectCard = ({
         {/* Description */}
         <div>
           <p className="mt-2 text-secondary text-[14px]">
-            {isExpanded ? description : truncateDescription(description, maxWords)}
+            {isExpanded ? overview : truncateDescription(overview, maxWords)}
             {/* Toggle button */}
-            {maxWords < wordCount(description) && <button
+            {maxWords < wordCount(overview) && <button
               className="text-blue-400 hover:text-blue-600"
               onClick={() => setIsExpanded(!isExpanded)}
             >

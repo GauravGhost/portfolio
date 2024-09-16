@@ -1,0 +1,26 @@
+.carousel-container {
+    position: relative;
+    /* Ensure it's positioned correctly */
+    width: 100%;
+    overflow: hidden;
+    /* Hide overflow to prevent arrows from showing outside */
+}
+
+
+.slick-prev {
+    position: absolute;
+    left: 20px;
+    z-index: 2;
+    color: black;
+}
+
+.slick-next {
+    position: absolute;
+    right: 30px;
+    z-index: 2;
+}
+
+.slick-prev:before, .slick-next:before {
+    color: black;
+    font-size: 30px;
+}
