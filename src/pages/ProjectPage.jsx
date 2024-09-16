@@ -31,9 +31,9 @@ const ProjectPage = () => {
         <div className="flex flex-col md:flex-row max-w-7xl mx-auto p-4 gap-10">
             <div className="md:w-1/3 pr-4 md:sticky md:top-20 md:h-[calc(100vh-5rem)] md:overflow-y-auto" style={{ scrollbarWidth: 'none' }}>
                 <div className='sticky top-0 bg-primary pb-4'>
-                    {/* <img src={project.image} alt={project.name} className="w-full h-[200px] object-cover sm:h-auto rounded-lg shadow-lg" /> */}
+                    <img src={project.image} alt={project.name} className="w-full h-[200px] object-cover sm:h-auto rounded-lg shadow-lg" />
                     <h1 className="text-2xl font-bold mt-4">{project.name}</h1>
-                    <p className="text-sm mt-2 text-gray-400">{project.overview}</p>
+                    {/* <p className="text-sm mt-2 text-gray-400">{project.overview}</p> */}
                     {project.features && Object.keys(project.features).length > 0 && (
                         <section className="mt-6 hidden sm:block">
                             <p className='mb-3 text-xl font-semibold'>Content</p>
