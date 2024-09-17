@@ -22,9 +22,27 @@ export default {
             "The flight model serves as the core entity within the system, capturing details about individual flights. It contains information such as the flight number, airplaneId, departureAirportId and arrivalAirportId, scheduled departure and arrival times, price, totalSeats and boardingGate assigned to the flight.",
             "The seat model represents the seating arrangements within each airplane. It includes information about airplaneId, row, col, seatType (e.g., economy, business, first class). It enables efficient allocation of seats during the booking process.",
         ],
-        "Flight Booking Service": [],
-        "Flight Api Gateway Service": [],
-        "Flight Notification Service": [],
+        "Flight Booking Service": [
+            "Automatic Cancellation of Expired Bookings using cron jobs that runs every 30 seconds.",
+            "The booking model includes a status field, which helps in tracking the progress of a booking.",
+            "The booking model also contains a totalCost field, which is calculated based on the number of seats reserved (noOfSeats) and the corresponding cost per seat.",
+            "Integration with RabbitMQ, When a booking is successfully made this microservice sends relevant booking information to the Flight Notification Service. It consume these messages and carry out additional actions."
+        ],
+        "Flight Api Gateway Service": [
+            "Centralized Entry Point, This microservice acts as a central entry point for all incoming requests from clients and applications that want to interact with the flight service.",
+            "User and Role Models: The Flight API Gateway Service incorporates user and role models to manage user information and permissions. The user model represents individual users of the system, containing details like user ID, username, email, and password (usually stored securely using hashing and salting techniques). The role model represents various roles that users can have, such as admin, customer, or flight_company.",
+            "Rate Limiting - It sets a threshold on the number of requests a client can make within a specified time frame.",
+            "Reverse Proxy - The microservice utilizes a reverse proxy for efficient routing of requests to the backend flight service.",
+            "Authentication System using JWT to ensure secure user authentication.",
+            "This microservice also features an authorization system that enforces access control based on user roles.",
+        ],
+        "Flight Notification Service": [
+            "Consumes booking information messages from RabbitMQ queue sent by the Flight Booking Service.",
+            "Utilizes Node Mailer to send confirmation emails to users regarding their successful flight bookings.",
+            "Manages email templates to ensure consistent and professional communication with users.",
+            "Implements robust error handling to manage failures in message consumption or email sending processes.",
+            "Designed to handle high volumes of booking notifications efficiently.",
+        ],
     },
     tags: [
         techTags.node,
@@ -32,7 +50,7 @@ export default {
         techTags.microservices,
         techTags.mysql
     ],
-    images:[
+    images: [
         airplane1,
         airplane1
     ],

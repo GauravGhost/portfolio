@@ -12,7 +12,13 @@ export default {
             "Secure login and registration for users.",
             "Access to a variety of coding problems categorized by difficulty and topic.",
             "Users can submit solutions, which are evaluated and tested against predefined test cases.",
+            "Dynamic, interactive user interface using React.",
+            "Enhanced with Tailwind CSS for responsive design and Framer Motion for smooth animations.",
         ],
+        "Challenges and Solutions": [
+            "Challenge: Ensuring a uniform experience across different devices.",
+            "Solution: Implementing responsive design elements using Tailwind CSS and Framer Motion for smooth animations."
+        ]
     },
     tags: [
         techTags.react,
