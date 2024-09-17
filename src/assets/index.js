@@ -4,6 +4,7 @@ import menu from "./ui/menu.svg";
 import close from "./ui/close.svg";
 import next from "./ui/next.png";
 import cross from './ui/cross.png';
+import developer from './ui/developer.svg';
 
 // company Logo
 import wiseneosco from "./company/wise.png";
@@ -69,6 +70,7 @@ export {
   close,
   next,
   cross,
+  developer,
 
   backend,
   creator,
