@@ -1,6 +1,6 @@
 import React from 'react'
-import { About, Contact, Experience, Hero, Tech, Works } from '../sections'
-import PersonalProject from '../sections/PersonalProject'
+import { About, Contact, Experience, Hero, Tech, Works } from '../sections/Homepage'
+import PersonalProject from '../sections/Homepage/PersonalProject'
 import { StarsCanvas } from '../components'
 
 const Homepage = () => {
@@ -18,7 +18,7 @@ const Homepage = () => {
                 <Contact />
                 <StarsCanvas />
             </div>
-           
+
         </>
     )
 }

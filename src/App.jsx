@@ -2,11 +2,11 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import {
   Navbar,
+  Feedbacks
 } from "./components";
 
 import Homepage from "./pages/Homepage";
 import ProjectPage from "./pages/ProjectPage";
-import { Feedbacks } from "./sections";
 
 const App = () => {
   return (

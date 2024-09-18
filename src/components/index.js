@@ -1,6 +1,7 @@
 import { EarthCanvas, BallCanvas, ComputersCanvas, StarsCanvas } from './canvas';
 import Navbar from "./Navbar";
 import CanvasLoader from "./Loader";
+import Feedbacks from './Feedbacks';
 
 
 export {
@@ -9,5 +10,6 @@ export {
   EarthCanvas,
   BallCanvas,
   ComputersCanvas,
-  StarsCanvas
+  StarsCanvas,
+  Feedbacks
 };

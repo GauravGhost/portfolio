@@ -1,10 +1,10 @@
 import { motion } from "framer-motion";
-import { styles } from "../styles";
-import { SectionWrapper } from "../hoc";
-import { fadeIn, textVariant } from "../utils/motion";
-import ProjectCard from "../components/ProjectCard";
-import ProjectSlider from "../components/Slider";
-import { personalProjects } from "../constants/personalProjects";
+import { styles } from "../../styles";
+import { SectionWrapper } from "../../hoc";
+import { fadeIn, textVariant } from "../../utils/motion";
+import ProjectCard from "../../components/ProjectCard";
+import ProjectSlider from "../../components/Slider";
+import { personalProjects } from "../../constants/personalProjects";
 
 const PersonalProject = () => {
     return (

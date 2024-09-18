@@ -1,6 +1,6 @@
-import { BallCanvas } from "../components/canvas";
-import { SectionWrapper } from "../hoc";
-import { technologies } from "../constants/technology";
+import { BallCanvas } from "../../components/canvas";
+import { SectionWrapper } from "../../hoc";
+import { technologies } from "../../constants/technology";
 
 const Tech = () => {
   return (
