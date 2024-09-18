@@ -71,18 +71,24 @@ const ProjectPage = () => {
                     <h2 className="text-2xl font-semibold mb-2" id="technology-used">Technologies Used</h2>
                     <div className="flex flex-wrap gap-2">
                         {project.tags?.map((tag, index) => (
-                            <div className='bg-green-800 text-white px-2 py-1 rounded flex flex-row gap-2 items-center justify-center'>
-                                <span><img className="h-7 w-7" src={tag.icon} /></span>
-                                <span key={index} className="">
+                            <div key={tag.name} className='bg-green-800 text-white px-2 py-1 rounded flex flex-row gap-2 items-center justify-center'>
+                                <span><img alt={tag.name} className="h-7 w-7" src={tag.icon} /></span>
+                                <span className="">
                                     {tag.name || tag}
+
                                 </span>
                             </div>
                         ))}
                     </div>
                 </section>
+                {/* Project Details */}
                 <section className="mt-6">
                     <h2 className="text-2xl font-semibold mb-2" id="project-details">Project Details</h2>
-                    <p className="text-slate-300">{project.description}</p>
+                    {project.description.split('\n').map((paragraph, index) => (
+                        <p key={index} className="text-slate-300 mb-2">
+                            {paragraph}
+                        </p>
+                    ))}
                 </section>
 
                 {/* Features Section */}
@@ -107,12 +113,11 @@ const ProjectPage = () => {
                 <section className="mt-6">
                     <h2 className="text-2xl font-semibold mb-2">Links</h2>
                     <div className="flex gap-4">
-                        {project.github && (
-                            <a href={project.github} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">GitHub Repository</a>
-                        )}
-                        {project.live && (
-                            <a href={project.live} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Live Demo</a>
-                        )}
+                        {
+                            Object.entries(project.source).length > 0 && Object.entries(project.source).map(([hostname, hostDetail]) => (
+                                <a key={hostname} href={hostDetail.link} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">{hostDetail.name}</a>
+                            ))
+                        }
                     </div>
                 </section>
             </div>

@@ -25,6 +25,8 @@ export default {
         techTags.javascript
     ],
     image: "https://crio-directus-assets.s3.ap-south-1.amazonaws.com/e6fb82a2-423d-4f62-9962-f19f2f81fa8c.png",
-    github: "https://github.com/GauravGhost/QKart-Backend",
-    live: "https://qkartmity.netlify.app/",
+    source: {
+        "github": { name: "Github", link: "https://github.com/GauravGhost/QKart-Backend" },
+        "live": { name: "Live Demo", link: "https://qkartmity.netlify.app/" },
+    },
 }

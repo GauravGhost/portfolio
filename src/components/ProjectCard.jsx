@@ -13,8 +13,7 @@ const ProjectCard = ({
   overview,
   tags,
   image,
-  github,
-  live,
+  source,
   titleText = '24',
   cardPadding = '15',
   tiltMax = "10",
@@ -54,9 +53,9 @@ const ProjectCard = ({
             {/* Source code and link  */}
             <div>
               <p className="text-[13px]">
-                {github && <a target="_blank" className="text-green-300 hover:text-green-50" href={github}>Github</a>}
-                {github && live && <span className="text-green-50"> | </span>}
-                {live && <a target="_blank" className="text-green-300 hover:text-green-50" href={live}>Live</a>}
+                {source.github && <a target="_blank" className="text-green-300 hover:text-green-50" href={source.github.link}>Github</a>}
+                {source.github && source.live && <span className="text-green-50"> | </span>}
+                {source.live && <a target="_blank" className="text-green-300 hover:text-green-50" href={source.live.link}>Live</a>}
               </p>
             </div>
           </div>

@@ -1,6 +1,7 @@
 // Work Project
 import accessControlSystemProject from "./access-control-system";
 import smartLibraryManagementProject from "./smart-library-management";
+import wiseNeoscoWebsiteProject from './wise-neosco-website';
 
 // Personal Project
 import zespcodeProject from "./zespcode";
@@ -15,6 +16,7 @@ export {
     // Work Project
     accessControlSystemProject,
     smartLibraryManagementProject,
+    wiseNeoscoWebsiteProject,
 
     // Personal Project
     zespcodeProject,

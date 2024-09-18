@@ -20,6 +20,7 @@ export default {
         techTags.redis,
     ],
     image: uber,
-    github: "https://github.com/GauravGhost/uber",
-    live: "",
+    source: {
+        "github": { name: "Github", link: "https://github.com/GauravGhost/uber" },
+    },
 }

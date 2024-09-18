@@ -27,6 +27,8 @@ export default {
         techTags.mysql
     ],
     image: highriseSdk,
-    github: "https://github.com/GauravGhost/hr-sdk",
-    live: "https://www.npmjs.com/package/hr-sdk",
+    source: {
+        "github": { name: "Github", link: "https://github.com/GauravGhost/hr-sdk" },
+        "live": { name: "Live Demo", link: "https://www.npmjs.com/package/hr-sdk" },
+    },
 }

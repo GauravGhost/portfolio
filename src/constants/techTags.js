@@ -22,6 +22,9 @@ import {
     prisma,
     microservice,
     fastify,
+    html,
+    css,
+    i18n,
 } from "../assets";
 
 export const techTags = {
@@ -149,5 +152,20 @@ export const techTags = {
         name: "tailwind",
         color: "blue-text-gradient",
         icon: tailwind,
-    }
+    },
+    html: {
+        name: "html",
+        color: "text-orange-500",
+        icon: html,
+    },
+    css: {
+        name: "css",
+        color: "text-cyan-500",
+        icon: css,
+    },
+    i18n: {
+        name: "i18n",
+        color: "text-blue-800",
+        icon: i18n,
+    },
 }

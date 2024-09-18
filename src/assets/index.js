@@ -40,6 +40,9 @@ import sequelize from './tech/sequelize.svg';
 import prisma from './tech/prisma.svg';
 import fastify from './tech/Fastify.svg';
 import microservice from './tech/microservice.png';
+import html from './tech/html.png';
+import css from './tech/css.svg';
+import i18n from './tech/i18n.svg';
 
 // Social Logo
 import linkedin from './social/linkedin.png';
@@ -101,6 +104,9 @@ export {
   prisma,
   fastify,
   microservice,
+  html,
+  css,
+  i18n,
 
   // Project
   carrent,

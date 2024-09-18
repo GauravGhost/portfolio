@@ -26,6 +26,8 @@ export default {
         techTags.tailwind
     ],
     image: portfolio,
-    github: "https://github.com/GauravGhost/portfolio",
-    live: "https://portfolio.zesp.in/",
+    source: {
+        "github": { name: "Github", link: "https://github.com/GauravGhost/portfolio" },
+        "live": { name: "Live Demo", link: "https://portfolio.zesp.in/" },
+    },
 }

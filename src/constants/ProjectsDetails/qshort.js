@@ -21,6 +21,8 @@ export default {
         techTags.mysql
     ],
     image: qshort,
-    github: "https://github.com/GauravGhost/QShort",
-    live: "https://qshort.zesp.in/",
+    source: {
+        "github": { name: "Github", link: "https://github.com/GauravGhost/QShort" },
+        "live": { name: "Github", link: "https://qshort.zesp.in/" },
+    },
 }

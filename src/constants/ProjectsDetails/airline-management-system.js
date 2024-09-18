@@ -55,6 +55,7 @@ export default {
         airplane1
     ],
     image: airplane,
-    github: "https://github.com/GauravGhost/Flight-Service",
-    live: "",
+    source: {
+        "github": { name: "Github", link: "https://github.com/GauravGhost/Flight-Service" },
+    },
 }
