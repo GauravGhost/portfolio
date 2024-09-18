@@ -12,7 +12,7 @@ const LinkSection = ({ source }) => {
                             href={hostDetail.link}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-white hover:text-slate-300 hover:bg-blue-600 rounded-lg bg-blue-500 p-1.5"
+                            className="text-white hover:text-slate-300 hover:bg-blue-600 rounded-lg bg-blue-500 p-1.5 visited:bg-blue-800 visited:text-slate-300"
                         >
                             {hostDetail.name}
                         </a>
