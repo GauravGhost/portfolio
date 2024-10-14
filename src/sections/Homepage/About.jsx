@@ -5,6 +5,8 @@ import { styles } from "../../styles";
 import { services } from "../../constants/services";
 import { SectionWrapper } from "../../hoc";
 import { fadeIn, textVariant } from "../../utils/motion";
+import { calculateExperience } from "../../utils/expCalculator";
+import { aboutFramework, aboutSkills, currentCompany, interestedLanguage } from "../../constants/AppConstant";
 
 const ServiceCard = ({ index, title, icon }) => (
   <Tilt
@@ -36,6 +38,7 @@ const ServiceCard = ({ index, title, icon }) => (
 );
 
 const About = () => {
+  const {years, months} = calculateExperience();
   return (
     <>
       <motion.div variants={textVariant()}>
@@ -47,9 +50,9 @@ const About = () => {
         variants={fadeIn("", "", 0.1, 1)}
         className="mt-4 text-secondary text-[17px]  leading-[30px] w-full"
       >
-        I am a software developer with 8 months of experience in Frontend development and backend development. I work at Wise Neosco India Pvt. Ltd., where I contribute to various projects using Next, Node, Express, Springboot and databases like MongoDB, MySql, MSSQL.<br /> I am proficient in C++, JavaScript, TypeScript, Java.<br />
+        I am a software developer with experience of <span className="font-bold text-green-700">+{years}.{months}</span> years in Frontend development and backend development. I work at <span>{currentCompany}</span>, where I contribute to various projects using <span className="text-green-700">{aboutFramework}</span><br /> I am proficient in {aboutSkills}<br />
         <div className="mb-4" />
-        I am interested in new programming languages like Rust and Go, and enjoy working on solving new engineering problems. Feel free to reach out at <a className="underline cursor-pointer text-blue-600" href="mailto:gyanendrak874@gmail.com">gyanendrak874@gmail.com</a> for collaboration or queries.
+        I am interested in new programming languages like <span className="text-green-700">{interestedLanguage}</span>, and enjoy working on solving new engineering problems. Feel free to reach out at <a className="underline cursor-pointer text-blue-600" href="mailto:gyanendrak874@gmail.com">gyanendrak874@gmail.com</a> for collaboration or queries.
       </motion.p>
 
       <div className="mt-20 flex flex-wrap justify-center gap-10">
