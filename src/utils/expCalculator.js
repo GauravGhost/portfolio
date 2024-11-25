@@ -1,5 +1,5 @@
 export function calculateExperience() {
-    const startDate = new Date('2023-12-01'); // Start date: December 1, 2023
+    const startDate = new Date('2023-11-01'); // Start date: December 1, 2023
     const currentDate = new Date(); // Current date
 
     let years = currentDate.getFullYear() - startDate.getFullYear();

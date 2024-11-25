@@ -6,19 +6,19 @@ import {
 } from "../assets";
 export const services = [
     {
-        title: "Web Developer",
+        title: "Node.js Developer",
         icon: web,
-    },
-    {
-        title: "React.js Developer",
-        icon: mobile,
     },
     {
         title: "Springboot Developer",
         icon: creator,
     },
     {
-        title: "Node.js Developer",
+        title: "React.js Developer",
+        icon: mobile,
+    },
+    {
+        title: "React Native Developer",
         icon: backend,
     },
 ];

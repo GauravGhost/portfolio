@@ -50,7 +50,7 @@ const About = () => {
         variants={fadeIn("", "", 0.1, 1)}
         className="mt-4 text-secondary text-[17px]  leading-[30px] w-full"
       >
-        I am a software developer with experience of <span className="font-bold text-green-700">+{years}.{months}</span> years in Frontend development and backend development. I work at <span>{currentCompany}</span>, where I contribute to various projects using <span className="text-green-700">{aboutFramework}</span><br /> I am proficient in {aboutSkills}<br />
+        I am a software developer with experience of <span className="font-bold text-green-700">+{years}.{months}</span> years in Backend development. I work at <span>{currentCompany}</span>, where I contribute to various projects using <span className="text-green-700">{aboutFramework}</span><br /> I am proficient in {aboutSkills}<br />
         <div className="mb-4" />
         I am interested in new programming languages like <span className="text-green-700">{interestedLanguage}</span>, and enjoy working on solving new engineering problems. Feel free to reach out at <a className="underline cursor-pointer text-blue-600" href="mailto:gyanendrak874@gmail.com">gyanendrak874@gmail.com</a> for collaboration or queries.
       </motion.p>

@@ -64,5 +64,6 @@ export default {
     image: zespcode,
     source: {
         "github": {name: "Github", link:"https://github.com/GauravGhost/zespcode"},
+        "live": { name: "Live Demo", link: "https://zespcode.zesp.in/" },
     },
 }
