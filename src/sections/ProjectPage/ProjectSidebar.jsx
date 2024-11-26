@@ -13,7 +13,7 @@ const ProjectSidebar = ({ name, features, image }) => {
     };
 
     const ContentLink = ({ id, name }) => {
-        return <div key={id} className="mb-2">
+        return <div className="mb-2">
             <p className="text-sm text-left font-semibold text-green-700 hover:text-green-500"><button className='text-left' onClick={() => scrollToElement(id)}>{name}</button></p>
         </div>
     }
@@ -24,13 +24,13 @@ const ProjectSidebar = ({ name, features, image }) => {
             {/* <p className="text-sm mt-2 text-gray-400">{project.overview}</p> */}
 
             {features && Object.keys(features).length > 0 && (
-                <section className="mt-6 hidden sm:block">
+                <section  className="mt-6 hidden sm:block">
                     <p className='mb-3 text-xl font-semibold'>Content</p>
-                    <ContentLink id={"technology-used"} name={"Technology Used"} />
-                    <ContentLink id={"project-details"} name={"Project Details"} />
+                    <ContentLink key="technology-used" id={"technology-used"} name={"Technology Used"} />
+                    <ContentLink key="project-details" id={"project-details"} name={"Project Details"} />
 
                     {Object.entries(features).map(([category]) => (
-                        <ContentLink id={category} name={category}/>
+                        <ContentLink key={category} id={category} name={category}/>
                     ))}
                     <ContentLink id={"link"} name={"Link"}/>
                 </section>
